@@ -5,7 +5,7 @@ import { Column, Entity } from "typeorm";
     name: 'mobile_provider'
 })
 export class MobileProvider extends DefaultDatabaseEntity<MobileProvider> {
-    @Column({unique: true})
+    @Column({ unique: true })
     name: string
 
     @Column()

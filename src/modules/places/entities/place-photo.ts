@@ -3,15 +3,12 @@ import { Column, Entity, ManyToOne } from "typeorm";
 import { BasePlace } from "./base-place";
 
 @Entity({
-    name: "price_list_entry"
+    name: 'place-photo'
 })
-export class PriceListEntry extends DefaultDatabaseEntity<PriceListEntry> {
+export class PlacePhoto extends DefaultDatabaseEntity<PlacePhoto> {
     @ManyToOne(() => BasePlace, (bp) => bp.priceList)
     place: BasePlace
 
     @Column()
-    name: string
-
-    @Column()
-    price: number
+    url: string
 }

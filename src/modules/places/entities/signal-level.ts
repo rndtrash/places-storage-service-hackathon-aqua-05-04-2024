@@ -8,12 +8,10 @@ import { BasePlace } from "./base-place";
 })
 export class SignalLevel extends DefaultDatabaseEntity<SignalLevel> {
     @ManyToOne(() => BasePlace, (bp) => bp.signalLevels)
-    @Column()
     place: BasePlace
 
     @OneToOne(() => MobileProvider)
     @JoinColumn()
-    @Column()
     provider: MobileProvider
 
     @Column()
