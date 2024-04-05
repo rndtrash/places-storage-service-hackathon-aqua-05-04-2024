@@ -3,7 +3,7 @@ import { Column, Entity, ManyToOne } from "typeorm";
 import { BasePlace } from "./base-place";
 
 @Entity({
-    name: "price-list-entry"
+    name: "price_list_entry"
 })
 export class PriceListEntry extends DefaultDatabaseEntity<PriceListEntry> {
     @ManyToOne(() => BasePlace, (bp) => bp.priceList)
